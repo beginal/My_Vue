@@ -1,0 +1,269 @@
+@import 'reset';
+$black: #212529;
+$gray: #868e96;
+$lgray: #f8f9fa;
+$keycolor: #e03131;
+$subcolor: #0c8599;
+$bg: #fff9db;
+.nav {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    opacity: 0.8;
+    border-top: 1px solid $lgray;
+    &-list {
+        li {
+            width: 25%;
+            float: left;
+            text-align: center;
+            a,
+            button {
+                width: 100%;
+                display: block;
+                padding: 6px 0;
+                color: $gray;
+                i {
+                    font-size: 25px;
+                }
+                span {
+                    display: block;
+                    font-size: 11px;
+                    padding: 5px 0 0 0;
+                }
+            }
+            &.active {
+                * {
+                    color: $subcolor;
+                }
+            }
+        }
+    }
+}
+
+.intro {
+    text-align: center;
+    &-inner {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        color: $keycolor;
+    }
+    h1 {
+        font-size: 60px;
+        padding: 0 0 25px 0;
+    }
+    .button {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 20px;
+        background: $gray;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 50px;
+    }
+}
+
+.day {
+    background: $lgray;
+    &-title {
+        padding: 20px 4% 10px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    &-list {
+        padding: 10px 0 50px;
+        &-item {
+            width: 92%;
+            margin: 0 auto 20px;
+            padding: 15px;
+            box-sizing: border-box;
+            box-shadow: 0 5px 15px 3px rgba(0, 0, 0, .03);
+            background: #fff;
+            border-radius: 12px;
+            &.open {
+                box-shadow: 0 5px 15px 10px rgba(0, 0, 0, .05);
+                border: 2px solid $keycolor;
+            }
+            .time {
+                font-size: 13px;
+                color: $gray;
+            }
+            .action {
+                padding: 20px 0 25px;
+                p,
+                input {
+                    display: block;
+                    width: 100%;
+                    border: 0;
+                    font-size: 22px;
+                    font-weight: bold;
+                    box-sizing: border-box;
+                    span {
+                        color: $gray;
+                        font-weight: normal;
+                    }
+                }
+                input {
+                    padding: 8px 8px;
+                    background: $lgray;
+                    border-radius: 5px;
+                    font-weight: normal;
+                }
+            }
+            .score {
+                text-align: center;
+                overflow: hidden;
+                button {
+                    width: 31%;
+                    margin: 0 1%;
+                    padding: 11px 0;
+                    font-size: 13px;
+                    font-weight: bold;
+                    display: inline-block;
+                    background: $lgray;
+                    color: $gray;
+                    text-transform: uppercase;
+                    border-radius: 50px;
+                    &.active {
+                        background: $keycolor;
+                        color: #fff;
+                    }
+                }
+            }
+            .note {
+                padding: 15px 0 0 0;
+                textarea {
+                    width: 100%;
+                    padding: 15px;
+                    box-sizing: border-box;
+                    border: 0;
+                    background: $lgray;
+                    border-radius: 5px;
+                    height: 80px;
+                }
+            }
+            .buttons {
+                text-align: center;
+                padding: 10px 0;
+                button {
+                    width: 48%;
+                    padding: 10px 0;
+                    font-size: 14px;
+                    border-radius: 50px;
+                    background: $lgray;
+                    color: #fff;
+                    &.save {
+                        background: $keycolor;
+                    }
+                    &.cancel {
+                        background: $gray;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.calendar {
+    padding: 30px 4%;
+    .fc {
+        button {
+            border-radius: 50px;
+            background: $lgray;
+            border: 0;
+            span {
+                color: $gray;
+                text-shadow: none;
+            }
+        }
+        &-center {
+            padding: 8px 0;
+            font-weight: bold;
+        }
+        &-view {
+            margin-top: 30px;
+            th,
+            td {
+                padding: 5px;
+                font-weight: bold;
+            }
+        }
+        &-today {
+            background: $keycolor !important;
+            color: #fff;
+        }
+    }
+}
+
+.about {
+    &-inner {
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    h1 {
+        font-size: 50px;
+        padding: 0 0 20px 0;
+        color: $keycolor;
+    }
+    p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
+
+.setting {
+    &-inner {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    h1 {
+        font-size: 28px;
+        font-weight: bold;
+        padding: 0 0 15px 0;
+    }
+    fieldset {
+        overflow: hidden;
+        padding: 10px 0;
+        &.submit {
+            padding-top: 20px;
+        }
+        label {
+            width: 30%;
+            float: left;
+            padding: 5px 0 5px 0;
+            box-sizing: border-box;
+        }
+        select {
+            width: 70%;
+            border: 0;
+            background: $lgray;
+            border-radius: 0;
+            font-size: 14px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 14px;
+            border-radius: 50px;
+            background: $lgray;
+            color: #fff;
+            &.save {
+                background: $keycolor;
+            }
+            &.cancel {
+                background: $gray;
+            }
+        }
+    }
+}
